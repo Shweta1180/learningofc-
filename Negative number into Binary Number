@@ -3,25 +3,25 @@
 using namespace std;
 void toBinary(int number) {
     if (number == 0) {
-        std::cout << "Binary representation: 0" << std::endl;
+        cout << "Binary representation: 0" << std::endl;
         return;
     }
 
     // Initialize a mask to extract the bits
     int mask = 1 << 31;
 
-    std::cout << "Binary representation: ";
+    cout << "Binary representation: ";
 
     for (int i = 0; i < 32; ++i) {
         if (number & mask)
-            std::cout << "1";
+            cout << "1";
         else
-            std::cout << "0";
+            cout << "0";
 
         number <<= 1;
     }
 
-    std::cout << std::endl;
+    cout << endl;
 }
 
 int main() {
